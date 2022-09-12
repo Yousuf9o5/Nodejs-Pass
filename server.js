@@ -1,18 +1,14 @@
+const { json: Json } = require("body-parser");
 const express = require("express");
 const app = express();
 
-app.set("view engine", "ejs");
-
 app.get("/", (req, res) => {
-  console.log("we are live");
-  res.render("index", { text1: "world" });
+  res.status(200);
+  res.send(":D");
+  console.log("Refreshed");
 });
 
-app.get("/users", (req, res) => {
-  res.json({ text: "testing" });
-});
-
-const orderRouter = require("./views/orders");
+const orderRouter = require("./orders");
 
 app.use("/orders", orderRouter);
 
