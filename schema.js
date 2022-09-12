@@ -25,9 +25,9 @@ splitOrders.forEach((element) => {
     customerItems = newElement[index].split(" ");
     let Items = {
       name: customerItems[0],
-      count: customerItems[1],
-      price: customerItems[2],
-      total: customerItems[3],
+      count: Number(customerItems[1]),
+      price: Number(customerItems[2]),
+      total: Number(customerItems[3]),
     };
     orderItem.push(Items);
   }
