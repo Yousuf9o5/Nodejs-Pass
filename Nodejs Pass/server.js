@@ -1,4 +1,3 @@
-const { json: Json } = require("body-parser");
 const express = require("express");
 const app = express();
 
